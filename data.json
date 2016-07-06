@@ -1,0 +1,58 @@
+[
+  
+  {
+    "id":100,
+    "state":"NJ",
+    "cars":200000,
+    "bikes":50000
+  },
+  
+  {
+    "id":76,
+    "state":"NY",
+    "cars":145960,
+    "bikes":12000
+  },
+  
+  {
+    "id":95,
+    "state":"TX",
+    "cars":563729,
+    "bikes":25000
+  },
+  
+  {
+    "id":20,
+    "state":"CA",
+    "cars":937373,
+    "bikes":19292
+  },
+  
+  {
+    "id":40,
+    "state":"IL",
+    "cars":382929,
+    "bikes":5000
+  },
+  
+  {
+    "id":80,
+    "state":"MI",
+    "cars":75000,
+    "bikes":15000
+  },
+  
+  {
+    "id":200,
+    "state":"IA",
+    "cars":19000,
+    "bikes":4000
+  },
+  
+  {
+    "id":250,
+    "state":"AZ",
+    "cars":40000,
+    "bikes":18000
+  }
+]

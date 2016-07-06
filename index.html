@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js" data-semver="1.5.3" data-require="angular.js@1.5.3"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    
+  <div ng-controller="datacntrl">
+    
+    <input type="text" ng-model="search" />
+    <table class="table table-bordered table-striped ">
+      <tbody>
+        <tr class="info">
+          <th>ID </th>
+          <th>State </th>
+          <th>Cars</th>
+          <th>Bikes</th>
+        </tr>
+        <tr ng-repeat="record in info | orderBy:'id':true|filter: search" >
+          <td>{{record.id }}</td>
+          <td>{{record.state}}</td>
+          <td>{{record.cars | number}}</td>
+          <td>{{record.bikes}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div ng-controller="weathercntrl">
+    
+    <table class="table table-striped table-bordered">
+      <tr class="info">
+        <th>ID</th>
+        <th>Login</th>
+        <th>Avatar</th>
+        <th>IsAdmin</th>
+      </tr>
+      <tr ng-repeat="rec in gitusers">
+       <td>{{rec.id}}</td>
+       <td>{{rec.login}}</td>
+       <td><img src="{{rec.avatar_url}}" width="50" height="50"></td>
+       <td>
+         <span ng-if="rec.site_admin ==false">
+           Normal user
+           <button class="btn btn-success" ng-click="toAdmin(rec.id)">Change to Admin</button>
+         </span>
+        <span ng-if="rec.site_admin ==true">
+           <button class="btn btn-primary">Admin</button>
+         </span>
+       </td>
+      </tr>
+    </table>
+  </div>
+  </body>
+
+</html>
